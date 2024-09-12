@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <style>
+        tr {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <table>
+            <tr border="2">
+                <td>Username</td>
+                <td><input type="text" id="uname"></td>
+            </tr>
+            <tr></tr>
+            <td>Password</td>
+            <td><input type="password" id="pwd"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" onclick="read()" value="Click"></td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        function read() {
+            var username = document.getElementById("uname").value;
+            var password = document.getElementById("pwd").value;
+            document.writeln("Welcome " + username);
+            document.writeln("Your password is " + password);
+        }
+    </script>
+</body>
+
+</html>
