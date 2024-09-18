@@ -35,3 +35,22 @@ btn4.addEventListener('click', function() {
         listItem.removeChild(lastItem);
     }
 })
+
+function calculateSum(a, b) {
+    return a + b;
+}
+
+const calBtn = document.getElementById('calculateButton');
+calBtn.addEventListener('click', function() {
+    try {
+        const num1 = parseFloat(document.getElementById('num1').value);
+        const num2 = parseFloat(document.getElementById('num2').value);
+        if (isNaN(num1) || isNaN(num2)) {
+            throw new Error('Invalid input: Please enter valid numbers.');
+        }
+        const result2 = calculateSum(num1, num2);
+        document.getElementById('result2').textContent = 'Sum: ' + result2;
+    } catch (error) {
+        document.getElementById('result2').textContent = 'Error: ' + error.message;
+    }
+})
